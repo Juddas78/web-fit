@@ -14,7 +14,7 @@ var upper = []string{"chest", "upper back", "middle back", "shoulders", "biceps"
 var lower = []string{"lower back", "glutes", "quads", "hamstrings", "calves", "abs"}
 
 func main() {
-
+	fmt.Println("Starting development server :)")
 	r := mux.NewRouter()
 	r.HandleFunc("/", HomeHandler).Methods("GET").Schemes("http")
 	r.HandleFunc("/workout", HomeHandler)

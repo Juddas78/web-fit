@@ -1,8 +1,8 @@
 version: "3"
 services:
-  go-docker-image:
-    build: ./
+  go-server:
+    build: ./go_server
     ports:
       - '8000:8000'
     volumes:
-      - ./:/app
+      - ./go_server:/app
