@@ -1,0 +1,67 @@
+{
+    "chest": [
+        "Barbell Bench Press",
+        "Incline Barbell Bench Press",
+        "Dumbbell Bench Press",
+        "Incline Dumbbell Bench Press",
+        "Weighted Dips for Chest",
+        "Decline Bench Press"
+    ],
+    "back": [
+        "Barbell Deadlift",
+        "Bent-Over Barbell Row",
+        "Weighted Pull-ups",
+        "Wide-Grip Pull-up",
+        "Standing T-Bar Row",
+        "Wide-Grip Pulldown",
+        "Close-Grip Pulldown",
+        "Seated Cable Row"
+    ], 
+    "abs": [
+        "Cable Crunch",
+        "Hanging Dumbbell Knee Raise",
+        "Landmine",
+        "Captain’s Chair Leg Raise",
+        "Ab-Wheel Rollout",
+        "Plank",
+        "Weighted Decline Sit-up",
+        "Bicycle"
+    ],
+    "shoulders": [
+        "Standing Barbell Overhead Press",
+        "Seated Dumbbell Overhead Press",
+        "Arnold Shoulder Press",
+        "Bent-Over Reverse Fly",
+        "Lateral Raise",
+        "Front Dumbbell Raise"
+    ],
+    "legs": [
+        "Barbell Squat",
+        "Standing Calf Raise",
+        "Calf Press",
+        "Romanian Deadlift",
+        "Leg Press",
+        "Hack Squat",
+        "Dumbbell Lunge"
+    ],
+    "biceps": [
+        "Seated Hammer Curl",
+        "Standing Barbell Curl",
+        "Inverted Rows",
+        "Zottman Curl",
+        "Weighted Chin-ups",
+        "Incline-Bench Curl",
+        "Preacher EZ-Bar Curl",
+        "Standing Cable Curl"
+    ],
+    "triceps": [
+        "Close-Grip Bench Press",
+        "Skullcrusher",
+        "Weighted Dips",
+        "Cable Push-Down",
+        "Dumbbell Kickback",
+        "Seated Overhead Dumbbell Extension"
+    ]
+
+
+}
