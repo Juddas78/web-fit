@@ -1,0 +1,14 @@
+.lift-name {
+    font-weight: 600;
+  }
+
+  #lifts {
+      font-size: 32px;
+      list-style-type: none;
+      border: 1pt solid gray;
+      background-color: gray;
+      border-radius: 4px;
+      max-width: 400px;
+      margin: auto;
+      margin-top: 50px;
+  }
