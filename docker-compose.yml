@@ -6,3 +6,11 @@ services:
       - '8000:8000'
     volumes:
       - ./go_server:/app
+
+  react-frontend:
+    build: ./webfit_react
+    ports:
+        - '3000:3000'
+    volumes:
+        - ./webfit_react:/app
+    stdin_open: true
