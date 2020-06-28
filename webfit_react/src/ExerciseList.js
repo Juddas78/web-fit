@@ -32,6 +32,14 @@ class ExerciseList extends React.Component {
         return <div>Error: {error.message}</div>;
       } else if (!isLoaded) {
         return <div>Loading...</div>;
+      } else if (exercises === null) {
+        return (
+          <ul id="lifts">
+              <li>
+                <span className="lift-name">Enter some muscle groups to get your workout</span>
+              </li>
+          </ul>
+        )
       } else {
         return (
           <ul id="lifts">

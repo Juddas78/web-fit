@@ -1,0 +1,16 @@
+#create-workout {
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+
+}
+
+#workout-btn {
+    background-color: steelblue;
+    border: black 4px solid;
+    border-radius: 40%;
+    width: 100px;
+    height: 100px;
+    margin: 15px;;
+    font-weight: bolder;
+}

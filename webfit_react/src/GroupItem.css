@@ -1,0 +1,36 @@
+.on {
+    background-color: darkcyan;
+}
+
+.off {
+    background-color: darkblue;
+}
+
+.btn {
+    width: 100px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;       /* The same as your div height */
+    border-radius: 10%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    text-align: center;
+    font-weight: 800;
+    margin: 5px;
+    display: inline-flex;
+    border-radius: 10%;
+    border: darkblue solid 2px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+p {
+    max-width: 80%;
+    margin: auto
+}
+
+
+ul {
+    list-style: none;
+    text-align: center;
+    padding: 15px;
+}

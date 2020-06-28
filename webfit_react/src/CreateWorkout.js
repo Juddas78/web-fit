@@ -1,6 +1,7 @@
 import React from 'react';
 import ExerciseList from './ExerciseList'
 import Groups from './GroupsForm'
+import './CreateWorkout.css'
 
 class CreateWorkout extends React.Component {
     constructor(props) {
@@ -77,13 +78,13 @@ class CreateWorkout extends React.Component {
     render() {
         const { exercises, userGroup, groups } = this.state;
         return (
-            <div>
+            <div id="create-workout">
                 <h1>Create Workout</h1>
                 <ExerciseList exercises={exercises}/>
-                <Groups userGroup={ userGroup } groups={groups} />
-                <button onClick={this.handleClick}>
+                <button id="workout-btn" onClick={this.handleClick}>
                   Get Workout
                 </button>
+                <Groups userGroup={ userGroup } groups={groups} />
             </div>
     );
     }

@@ -1,10 +1,13 @@
 import React from 'react';
+import './GroupItem.css';
+
+
 
 class GroupItem extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-          isToggleOn: true,
+          isToggleOn: false,
           name: props.name
         };
   
@@ -17,14 +20,16 @@ class GroupItem extends React.Component {
         this.setState(state => ({
             isToggleOn: !state.isToggleOn
         }));
+
     }
   
     render() {
-        const { name, isToggleOn } = this.state;
+      let btn_class = "btn "
+        const { name, isToggleOn} = this.state;
         return (
-            <button onClick={this.handleClick}>
-            {name}: {isToggleOn ? 'ON' : 'OFF'}
-            </button>
+            <div className={isToggleOn ? "btn on" : "btn off"} onClick={this.handleClick}>
+            <p>{name}</p>
+            </div>
       );
     }
   }

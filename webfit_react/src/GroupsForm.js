@@ -1,5 +1,6 @@
 import React from 'react';
 import GroupItem from './GroupItem'
+import './GroupsForm.css'
 class Groups extends React.Component {
     inputGroups = []
     constructor(props) {
@@ -16,7 +17,7 @@ class Groups extends React.Component {
     selectGroup(item) {
         const index = this.props.userGroup.indexOf(item);
         if( index > -1) {
-            this.props.userGroup.splice(index, index + 1)
+            this.props.userGroup.splice(index, 1)
             console.log(item, ' removed!', this.props.userGroup);
         } else {
             this.props.userGroup.push(item)
@@ -28,13 +29,11 @@ class Groups extends React.Component {
     // const { muscleGroups } = this.state;
     const { groups } = this.props;
       return (
-        <ul>
+        <div className="groups-div">
             {groups.map(group => (
-            <li>
                 <GroupItem name={group} isToggleOn='OFF' selectGroup={this.selectGroup}></GroupItem>
-            </li>
             ))}
-        </ul>
+        </div>
       );
     }
   }
