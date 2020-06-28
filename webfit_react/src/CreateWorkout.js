@@ -1,5 +1,5 @@
 import React from 'react';
-import Workout from './Workout'
+import ExerciseList from './ExerciseList'
 import Groups from './GroupsForm'
 
 class CreateWorkout extends React.Component {
@@ -38,20 +38,20 @@ class CreateWorkout extends React.Component {
           )
       }
 
-      handleClick() {
+      async handleClick() {
         console.log(this.state.userGroup)
-        fetch("/workout", {
+        await fetch("/workout", {
           method: 'POST', // *GET, POST, PUT, DELETE, etc.
           mode: 'cors', // no-cors, *cors, same-origin
           cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
           credentials: 'same-origin', // include, *same-origin, omit
           headers: {
+            'Accept': 'application/json',
             'Content-Type': 'application/json'
-            // 'Content-Type': 'application/x-www-form-urlencoded',
           },
           redirect: 'follow', // manual, *follow, error
           referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-          body: this.state.userGroup // body data type must match "Content-Type" header
+          body: JSON.stringify(this.state.userGroup) // body data type must match "Content-Type" header
         })
           .then((res) => res.json())
           .then(
@@ -59,7 +59,8 @@ class CreateWorkout extends React.Component {
               console.log(result);
               this.setState({
                 isLoaded: true,
-                exercises: result.exercises
+                exercises: result.exercises,
+                // userGroup: []
               });
             },
             // Note: it's important to handle errors here
@@ -78,7 +79,7 @@ class CreateWorkout extends React.Component {
         return (
             <div>
                 <h1>Create Workout</h1>
-                <Workout exercises={exercises}/>
+                <ExerciseList exercises={exercises}/>
                 <Groups userGroup={ userGroup } groups={groups} />
                 <button onClick={this.handleClick}>
                   Get Workout

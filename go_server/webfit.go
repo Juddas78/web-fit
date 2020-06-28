@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"math/rand"
 	"time"
 )
@@ -109,18 +110,22 @@ type Set struct {
 
 type Groups []string
 
-func createWorkout(groups Groups, intensity int) Workout {
+func createWorkout(groups Groups, intensity int) (Workout, error) {
 	// to do assumed hypertrophic, add support for others here
 	// to do add used exercises list to pass to chooselift
-	r := rand.NewSource(time.Now().UnixNano())
-	s := rand.New(r)
-	exercises := []Exercise{}
-	for _, group := range groups {
-		exercise := Exercise{Sets: chooseSets(intensity), Name: chooseLift(group, s)}
-		// fmt.Printf("Group: %s, Lift: %s\n", group, exercise.name)
-		exercises = append(exercises, exercise)
+	if len(groups) == 0 {
+		return Workout{}, errors.New("Error: Not enough groups")
+	} else {
+		r := rand.NewSource(time.Now().UnixNano())
+		s := rand.New(r)
+		exercises := []Exercise{}
+		for _, group := range groups {
+			exercise := Exercise{Sets: chooseSets(intensity), Name: chooseLift(group, s)}
+			// fmt.Printf("Group: %s, Lift: %s\n", group, exercise.name)
+			exercises = append(exercises, exercise)
+		}
+		return Workout{exercises}, nil
 	}
-	return Workout{exercises}
 }
 
 func chooseSets(intensity int) []Set {

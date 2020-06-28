@@ -1,8 +1,8 @@
 import React from 'react';
-import './Workout.css';
+import './ExerciseList.css';
 
 
-class Workout extends React.Component {
+class ExerciseList extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
@@ -28,7 +28,6 @@ class Workout extends React.Component {
     render() {
       const { error, isLoaded } = this.state;
       const { exercises } = this.props
-      console.log(exercises);
       if (error) {
         return <div>Error: {error.message}</div>;
       } else if (!isLoaded) {
@@ -46,4 +45,4 @@ class Workout extends React.Component {
       }
     }
   }
-  export default Workout;
+  export default ExerciseList;
