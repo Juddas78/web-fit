@@ -2,11 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import MyComponent from './Workout.js'
+import CreateWorkout from './CreateWorkout';
+
 
 ReactDOM.render(
   <React.StrictMode>
-  <MyComponent />
+    <CreateWorkout />
   </React.StrictMode>,
   document.getElementById('root')
 );
